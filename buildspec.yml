@@ -1,0 +1,23 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+      - echo Entering install phase...
+      - node -v
+      - npm install -g yarn
+      - echo "Installed yarn successfully"
+  pre_build:
+    commands:
+      - echo Entering pre_build phase...
+      - echo Nothing to do in the pre_build phase...
+  build:
+    commands:
+      - echo Entering build phase...
+      - echo Build started on `date`
+      - yarn install && yarn run cleanup && yarn run webpack:prod:main
+      - echo "******** Uploading to S3 ********"
+      - aws s3 sync ./target/www/ s3://saasclient
+  post_build:
+    commands:
+      - echo Build completed on `date`

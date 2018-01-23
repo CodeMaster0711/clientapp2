@@ -1,0 +1,186 @@
+/* chetan css start */
+.search-header{max-width: 250px;}
+.autocomplete-suggestions{
+    display: block !important;
+    max-width: 380px !important;
+    padding: 0px !important;
+    margin-top: -1px !important;
+    background-color: #ffffff !important;
+    border-radius: 2px;
+    font-family: "Source Sans Pro", sans-serif;
+}
+.autocomplete-suggestions:before{
+    border-width: 0 !important;
+}
+.autocomplete-suggestion-separator{
+	display: block;
+    padding: 0;
+    height: 0;
+    border-top: 1px solid #eeeeee;
+    margin: 0;
+    border-bottom: none;
+    font-size: 0px;
+}
+.autocomplete-suggestion.suggestion{
+	display: block;
+    overflow: hidden;
+    margin: 0;
+    padding: 4px 10px 4px 10px;
+    border-top: 1px solid transparent;
+    border-bottom: 1px solid transparent;
+    color: #333333;
+    line-height: 16px;
+    cursor: pointer;
+    box-sizing: border-box;
+    border-radius: 0;
+    border: 0;
+    line-height: 16px; 
+    font-weight: 700;   
+}
+.autocomplete-suggestion.product{
+	display: block;
+    overflow: hidden;
+    margin: 0;
+    padding: 4px 10px 4px 10px;
+    border-top: 1px solid transparent;
+    border-bottom: 1px solid transparent;
+    color: #333333;
+    line-height: 16px;
+    cursor: pointer;
+    border: 0;
+    border-radius: 0;
+}
+.autocomplete-suggestions .product-label,
+.autocomplete-suggestions .suggestion-label{
+    display: block;
+    padding: 0 10px 0;
+    color: #a0a0a0;
+    text-align: right;
+    text-transform: uppercase;
+    font-size: 10px;
+    line-height: 14px;
+    border-top: 1px solid #eeeeee;
+    border-bottom: 1px solid #eeeeee;
+    background: #f7f7f7;
+    cursor: auto;
+}
+
+.autocomplete-suggestion.product:hover,.autocomplete-suggestion.suggestion:hover{
+	background-color:#f7f7f7;
+	box-shadow: none;
+}
+.autocomplete-suggestion.product .suggestion{
+	clear: both;
+    display: block;
+    padding: 2px;
+    min-height: 60px;
+    outline: none;
+    opacity: 1;
+    text-decoration: none;
+}
+.autocomplete-suggestion.product .suggestion .img{
+	display: inline-block;
+    float: left;
+    margin: 5px 10px 5px 0px;
+    text-align: center;
+    max-width: 70px;
+}
+.autocomplete-suggestion.product .suggestion .img img{
+	max-width: 70px;
+    max-height: 70px;
+}
+.autocomplete-suggestion.product .suggestion .info{
+	display: block;
+    overflow: hidden;
+    width: auto;
+}
+.autocomplete-suggestion.product .suggestion .info h3{
+	display: block;
+    color: #404040;
+    font-weight: bold;
+    font-size: 100%;
+    margin-top: 3px;
+}
+.autocomplete-suggestion.product .suggestion .highlight{
+	color: #404040;
+	font-weight: bold;
+}
+.autocomplete-suggestion.product .suggestion .info p.price{
+	display: inline-block;
+    white-space: nowrap;
+    background: transparent;
+    font-style: normal;
+    font-size: 18px;
+    color: #404040;
+    margin-top: 6px;
+    font-weight: bold;
+    padding: 0;
+    margin-bottom: 0;
+}
+.autocomplete-suggestion.product .suggestion .info .description{
+	margin-top: 5px;
+    color: #747474;
+    max-height: 3.9em;
+    -webkit-line-clamp: 3;
+    word-wrap: break-word;
+    line-height: 1.3!important;
+    overflow: hidden;
+    display: -webkit-box;
+    position: relative;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    text-overflow: -o-ellipsis-lastline;
+   	font-size: 16px;
+}
+@media only screen and (max-width: 749px){
+	.autocomplete-suggestions {
+		max-width: 100% !important;
+		background-color: #f7f7f7 !important;
+		left: 0!important;
+		right: 0!important;
+		box-shadow:none;
+		border-bottom: 1px solid #ddd;
+	}
+	.autocomplete-suggestion-separator{
+		margin: 0 7px;
+	    line-height: 0;
+	    height: 0;
+	    padding: 0;
+	    border-top: none;
+	    border-bottom: none;
+		width: auto;
+	}
+	.autocomplete-suggestions .product-label,
+	.autocomplete-suggestions .suggestion-label{
+		padding: 7px 10px 0px;
+		margin: 0 7px;
+		color: #333;
+		font-size: 11px;
+    	line-height: 14px;
+	}
+	.autocomplete-suggestions .autocomplete-suggestion:last-child {
+	    margin-bottom: 7px;
+	}
+	.autocomplete-suggestion.product{
+		padding: 7px 10px 7px 10px;
+		margin: 0 7px;
+		width: auto;
+		border-bottom: 1px solid #eee;
+    	border-left: 1px solid #eee;
+    	border-right: 1px solid #eee;
+	}
+	.autocomplete-suggestion.suggestion{
+		padding: 12px 10px 12px 10px;
+		margin: 0 7px;
+		width: auto;
+		border-bottom: 1px solid #eee;
+    	border-left: 1px solid #eee;
+    	border-right: 1px solid #eee;
+	}
+	.autocomplete-suggestion.product .suggestion .info p.price{
+		font-size: 16px;
+	}
+	.autocomplete-suggestion.product .suggestion .info .description{
+		font-size: 14px;
+	}
+}

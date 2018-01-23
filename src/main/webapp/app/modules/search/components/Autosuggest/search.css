@@ -1,0 +1,243 @@
+/*
+ * Suggestion
+ */
+
+/*
+ * Suggestion content
+ */
+
+.highlight {
+    color: #f45b4f;
+    font-weight: normal;
+}
+
+.autocomplete-suggestions {
+    cursor: default;
+    border-top: 0;
+    position: absolute;
+    display: none;
+    z-index: 9999;
+    box-sizing: border-box;
+    width: 100% !important;
+    margin-top: 14px;
+
+    padding: 0 !important;
+    background-color: #ffffff !important;
+    box-shadow: 0 0 5px rgba(0, 0, 0, .25) !important;
+    text-align: left;
+    max-width: 345px !important;
+    border-radius: 2px;
+
+}
+
+.autocomplete-suggestions:before {
+    content: '';
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 10px 12px 10px;
+    position: absolute;
+
+    left: 12px !important;
+    right: auto;
+    border-color: transparent transparent #eeeeee transparent !important;
+    top: -14px !important;
+}
+
+.autocomplete-container {
+    max-height: 300px;
+    overflow: auto;
+    padding: 0px 10px;
+}
+
+.autocomplete-suggestion {
+    position: relative;
+    line-height: 23px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 16px;
+    background: #fff;
+
+    color: #000000 !important;
+    border-radius: 0 !important;
+    border: 0 !important;
+    border-bottom: 0.5px solid #e8e8e8 !important;
+    margin-bottom: 0px;
+    padding: 7px;
+}
+
+.autocomplete-suggestion.selected {
+    background-color: #f7f7f7;
+}
+
+.autocomplete-suggestion:hover {
+    box-shadow: 0px 5px 10px rgba(92, 92, 92, 0.15);
+}
+
+.suggestion {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    color: initial;
+    text-decoration: none;
+    line-height: 1.3;
+}
+
+a.suggestion:hover {
+    opacity: 1;
+}
+
+.suggestion .img {
+    max-width: 50px;
+}
+
+.suggestion .img img {
+    max-width: 100%;
+    height: auto;
+}
+
+.suggestion .info {
+    width: calc(100% - 100px);
+    padding-left: 10px;
+    padding-right: 10px;
+    white-space: initial;
+}
+
+.suggestion .info h3 {
+    font-size: 16px;
+    margin: 0px;
+    margin-bottom: 5px;
+    display: block;
+    font-weight: normal;
+    color: #000000;
+    line-height: 20px;
+    white-space: initial;
+}
+
+.suggestion:hover .info h3 {
+    color: #000;
+}
+
+.suggestion .info p {
+    font-size: 12px;
+    margin: 0px;
+    max-width: 100%;
+    color: gray;
+}
+
+/* search*/
+
+.autocomplete-suggestions:after {
+    content: '';
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 10px 12px 10px;
+    border-color: transparent transparent #f7f7f7 transparent;
+    position: absolute;
+    top: -12px;
+    left: 12px;
+    right: auto;
+}
+
+.search-title-span {
+    display: block;
+    padding: 0px 10px 0px;
+    color: #a0a0a0;
+    text-align: right;
+    text-transform: uppercase;
+    font-size: 10px;
+    line-height: 14px;
+    border-top: 1px solid #eeeeee;
+    border-bottom: 1px solid #eeeeee;
+    background: #f7f7f7;
+    cursor: auto;
+}
+
+.search-title-span:first-child {
+    border-top: 1px solid transparent;
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+}
+
+.pop-suggestion {
+    display: block;
+    overflow: hidden;
+    margin: 0;
+    padding: 4px 10px 4px 10px;
+    border-top: 1px solid transparent;
+    border-bottom: 1px solid transparent;
+    color: #000000;
+    line-height: 16px;
+    cursor: pointer;
+}
+
+.pop-suggestion:hover {
+    background-color: #f7f7f7;
+}
+
+.autocomplete-suggestion:hover {
+    background-color: #f7f7f7;
+}
+
+.suggestion .info h3 {
+    display: block !important;
+    font-size: 100% !important;
+    margin-top: 3px !important;
+}
+
+.suggestion .img {
+    max-width: 75px !important;
+}
+
+.suggestion .info p.price {
+    font-size: 16px;
+    margin: 0px;
+    padding: 0 !important;
+    border-radius: 3px;
+    display: inline-block;
+    margin-bottom: 5px;
+    color: #014e70;
+
+    background: transparent !important;
+}
+
+@media only screen and (max-width: 767px) {
+    .autocomplete-suggestions {
+        max-width: 100% !important;
+        left: 0 !important;
+        right: 0 !important;
+        margin: 14px auto 0;
+    }
+
+    .autocomplete-suggestions:before, .autocomplete-suggestions:after {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+
+    .suggestion .info h3 {
+
+        font-size: 14px !important;
+    }
+
+}
+
+@media only screen and (max-width: 360px) {
+
+    .suggestion .img {
+        max-width: 50px !important;
+    }
+
+    .suggestion .info {
+        width: calc(100% - 35px) !important;
+    }
+
+    .suggestion .info h3 {
+        margin: 0 !important;
+        font-size: 14px !important;
+    }
+
+}

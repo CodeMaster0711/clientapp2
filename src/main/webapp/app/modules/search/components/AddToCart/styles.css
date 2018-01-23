@@ -1,0 +1,30 @@
+.b-modal {
+  background: #fff;
+  border-radius: 3px;
+  border: 1px solid #ddd;
+  left: 50%;
+  outline: none;
+  padding: 10px 0;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%);
+  width: 240px;
+}
+
+.b-overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+}
+
+.b-modal__button-group {
+  text-align: center;
+}
+
+.b-modal__button-group button {
+  margin: 0 10px;
+  width: 75px;
+}
